@@ -1,0 +1,25 @@
+import random
+user_input = input("Rock, paper, or scissors? - ").strip().lower() 
+choice_list = ["rock", "paper", "scissors"]
+
+if user_input in choice_list:
+  print(f"You chose {user_input}")
+  selected_item = random.choice(choice_list).lower()
+  computer = "Computer chose " + selected_item
+  print(computer)
+
+  if user_input == selected_item:
+      print('Draw')
+  elif user_input == "rock" and selected_item == "scissors":
+      print("You win!")
+  elif user_input == "paper" and selected_item == "rock":
+      print("You win!")
+  elif user_input == "scissors" and selected_item == "paper":
+      print("You win!")
+  else:
+      print("Computer wins")
+else:
+  print("Invalid choice. Please try again.")
+  
+
+
